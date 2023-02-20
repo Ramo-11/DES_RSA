@@ -1,0 +1,21 @@
+Computer security researchers say Internet worms are becoming more complex 
+and could cause much more harm than previous versions: Internet Security 
+Systems' X-Force research engineer Neel Mehta says the Blaster worm, for 
+example, necessarily had to connect through a port usually blocked, thus 
+hindering its ability to spread as fast as possible. Nimda, however, represents
+a more complex worm in that it targeted internal networks and pieces of local 
+networks that were easier to break into and live in. Zone Labs' Fred Felman 
+agrees that worms could do more to penetrate systems by exploiting multiple 
+vulnerabilities or finding other ways to propagate once inside the system. 
+Gartner's Richard Stiennon warns against "low and slow" worm attacks that 
+go unnoticed by administrators and security systems until they unleash a 
+catastrophic attack, while Mehta says encryption advances could allow worms to 
+carry more potent executables without being identified as doing so. A lot of 
+the current security problems are the shared responsibility of users and software 
+vendors, who create connected products that are easy to use but also more vulnerable 
+to Internet attack. Enterprises can do more to protect themselves by adopting advanced 
+firewalls that inspect packets and intrusion-detection systems that break down data 
+into protocols instead of just matching patterns, and companies should also assess 
+their security risks and write rules for when and how applications can connect to 
+the Internet. Stiennon adds that organizations should not rely on a monolithic IT 
+architecture, but vary their components in order to better contain possible break-ins.
