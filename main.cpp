@@ -34,7 +34,7 @@ int main() {
 }
 
 void printPlainTextInHex(DES des, std::vector<std::string> roundKey, std::vector<std::string> rk) {
-    std::ofstream outFile("Plain_Text_Hex");
+    std::ofstream outFile("DES_Plain_Text_Hex");
     std::string cipher("");
 	reverse(roundKey.begin(), roundKey.end());
 	reverse(rk.begin(), rk.end());
@@ -46,7 +46,7 @@ void printPlainTextInHex(DES des, std::vector<std::string> roundKey, std::vector
                 outFile << std::endl;
                 var = 0;
             }
-			std::string text = des.encryptPlainText(cipher, roundKey, rk);
+			std::string text = des.decryptCipherText(cipher, roundKey, rk);
             for (int i = 0; i < text.size(); i += 2) {
                 // print the current two characters
                 if(i == text.size() - 2)
@@ -63,8 +63,8 @@ void printPlainTextInHex(DES des, std::vector<std::string> roundKey, std::vector
 }
 
 void convertHexToASCII() {
-    std::ifstream inFile("Plain_Text_Hex");
-    std::ofstream outFile("Plain_Text");
+    std::ifstream inFile("DES_Plain_Text_Hex");
+    std::ofstream outFile("DES_Plain_Text");
     std::string line;
     std::string plainText;
     while(getline(inFile, line)) {

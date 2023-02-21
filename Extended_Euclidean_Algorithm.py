@@ -9,8 +9,8 @@ def extended_gcd(a, b):
         x_last, x_initial = x_initial, x_last - quotient * x_initial
         y_last, y_initial = y_initial, y_last - quotient * y_initial
 
-    return x_last, y_last, a
+    return x_last
 
-result, y_last, a = extended_gcd(3125, 9987)
+result = extended_gcd(3125, 9987)
 
 print(f"Multiplicative inverse of 3125 modulo 9987 is: {result}")

@@ -62,12 +62,45 @@ for line in lines:
 line = []
 lines = []
 for decrypted in decrypted_list:
-    decrypted = str(decrypted)
+    if len(str(decrypted)) % 2 != 0:
+        decrypted = "0" + str(decrypted)
+    else:
+        decrypted = str(decrypted)
     for i in range(0, len(decrypted), 2):
         line.append(decrypted[i:i+2])
     lines.append(line)
     line = []
-print(lines)
-# for line in lines:
-#     for num in line:
-#         if len(str(num))
+
+f = open("RSA_decrypted_numbers", "w")
+for line in lines:
+    for one in line:  
+        f.write(one)
+    f.write("\n")
+f.close()
+            
+matrix = [
+    " !\"#$%&'()",
+    "*+,-./0123",
+    "456789:;<=",
+    ">?@ABCDEFG",
+    "HIJKLMNOPQ",
+    "RSTUVWXYZ[",
+    "\\]^_`abcde",
+    "fghijklmno",
+    "pqrstuvwxy",
+    "z{|}~\n\r "
+]
+
+final_plain_text = ""
+
+for line in lines:
+    for one in line:
+        row = int(one) // 10
+        col = (int(one) % 10)
+        letter = matrix[row][col]
+        final_plain_text += letter
+    final_plain_text += "\n"
+            
+f = open("RSA_Plain_Text", "w")
+f.write(final_plain_text)
+f.close()

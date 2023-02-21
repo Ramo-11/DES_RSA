@@ -302,7 +302,7 @@ class DES {
             return result;
         }
 
-        std::string encryptPlainText(std::string plainText, std::vector<std::string> roundKey, std::vector<std::string> rk) {
+        std::string decryptsCipherText(std::string plainText, std::vector<std::string> roundKey, std::vector<std::string> rk) {
             plainText = hexToBin(plainText);
 
             // Step 1: Apply initial permutation to plaintext       
